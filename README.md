@@ -14,32 +14,25 @@ comparativo da precificação (com vídeo), instalação e suporte e chamada fin
 ```
 rotulafacil-desktop/
 ├── desktop/
-│   ├── index.html      # Página completa (HTML + CSS + JS, sem dependências)
+│   ├── index.html      
 │   ├── img/
-│   │   ├── banner-notebook-embalagens.webp  # Banner do topo (fundo transparente)
-│   │   ├── do-programa-ao-produto.webp      # Sequência tela, etiqueta e embalagem
-│   │   ├── og-rotulafacil.jpg               # Imagem de compartilhamento
-│   │   └── telas/                           # Prints reais da galeria
-│   └── video/          # Vídeos horizontal e vertical (MP4) e capas
+│   │   ├── banner-notebook-embalagens.webp  
+│   │   ├── do-programa-ao-produto.webp      
+│   │   ├── og-rotulafacil.jpg              
+│   │   └── telas/                          
+│   └── video/         
 ├── scripts/
-│   ├── build.mjs       # Valida a página e gera dist/
-│   └── serve.mjs       # Servidor da prévia local
+│   ├── build.mjs       
+│   └── serve.mjs      
 ├── docs/
-│   └── preview.png     # Captura da página inteira (usada neste README)
+│   └── preview.png    
 ├── package.json
 ├── .editorconfig
 ├── .gitignore
 └── README.md
 ```
 
-## Como rodar
 
-```bash
-npm run dev       # prévia em http://localhost:4173/
-npm run build     # valida e gera dist/
-```
-
-Para publicar, envie o conteúdo de `dist/` para a pasta `/desktop/` do servidor.
 
 ## Acessibilidade e desempenho
 

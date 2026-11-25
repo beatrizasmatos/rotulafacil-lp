@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!-- Rótula Fácil Desktop: landing page de lançamento | Desenvolvido por nixdevcode.com -->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Novo Rótula Fácil Desktop | Rótulos e tabela nutricional ANVISA</title>
+<meta name="author" content="nixdevcode.com">
+<meta name="description" content="Chegou o novo Rótula Fácil Desktop: rótulos, etiquetas, tabela nutricional no padrão ANVISA, código de barras, QR Code e precificação num só programa. Sem mensalidade.">
+<meta property="og:title" content="Chegou o novo Rótula Fácil Desktop">
+<meta property="og:description" content="Rótulos, tabela nutricional ANVISA e precificação num só programa. Licença permanente, sem mensalidade.">
+<meta property="og:image" content="https://www.rotulafacil.com.br/desktop/img/notebook.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ef5a1c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#ef5a1c; --orange-2:#ff8a1f; --red:#d9361f; --sun:#ffc23d;
+  --ink:#16120f; --muted:#5d5752; --line:#e9e5e0; --surface:#f6f3ef; --dark:#16120f;
+  --max:1200px; --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{font-family:"Archivo",system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(var(--max),100% - 48px);margin-inline:auto}
+.display{font-stretch:118%;font-weight:800;letter-spacing:-.035em;line-height:.98;text-wrap:balance}
+h2.display{font-size:clamp(2.2rem,5vw,3.9rem)}
+h3{font-size:1.2rem;font-weight:700;letter-spacing:-.01em;line-height:1.3}
+.muted{color:var(--muted)}
+section{padding-block:clamp(80px,11vw,140px)}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;font:700 16.5px/1 "Archivo",sans-serif;font-stretch:105%;transition:transform .2s,background .2s,box-shadow .2s;white-space:nowrap}
+.btn svg{width:18px;height:18px;transition:transform .2s}
+.btn:hover svg{transform:translateX(4px)}
+.btn-white{background:#fff;color:var(--ink);box-shadow:0 10px 30px -10px rgba(80,20,0,.55)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 16px 36px -12px rgba(80,20,0,.6)}
+.btn-orange{background:var(--orange);color:#fff}
+.btn-orange:hover{background:var(--red)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:999px}
+
+/* HERO */
+.hero{position:relative;color:#fff;padding:0 0 clamp(40px,5vw,64px);overflow:hidden;
+  background:radial-gradient(120% 90% at 15% 0%,var(--orange-2) 0%,var(--orange) 45%,var(--red) 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.18;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.55) 1px,transparent 1.2px);background-size:22px 22px;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 75%);mask-image:linear-gradient(180deg,#000 0%,transparent 75%)}
+.hero::after{content:"";position:absolute;width:900px;height:900px;border-radius:50%;left:50%;top:58%;transform:translateX(-50%);
+  background:radial-gradient(closest-side,rgba(255,194,61,.45),transparent);pointer-events:none}
+.top{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;height:84px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-stretch:112%;font-size:1.15rem;letter-spacing:-.02em}
+.brand i{width:30px;height:30px;border-radius:9px;background:#fff;display:grid;place-items:center}
+.brand i svg{width:18px;height:18px}
+.top-link{font-weight:600;font-size:15px;display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;border:1.5px solid rgba(255,255,255,.45);transition:background .2s}
+.top-link:hover{background:rgba(255,255,255,.14)}
+.hero-copy{position:relative;z-index:3;text-align:center;padding-top:clamp(36px,6vw,72px)}
+.pill{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:7px 16px 7px 7px;font-size:14px;font-weight:600;backdrop-filter:blur(6px)}
+.pill b{background:#fff;color:var(--orange);border-radius:999px;padding:3px 10px;font-size:12.5px;font-weight:800;letter-spacing:.02em}
+.hero h1{font-size:clamp(2.9rem,8vw,6.4rem);max-width:13ch;margin:28px auto 0}
+.hero .lead{font-size:clamp(1.08rem,1.7vw,1.3rem);max-width:38rem;margin:26px auto 36px;color:rgba(255,255,255,.92)}
+.hero .actions{display:flex;flex-direction:column;align-items:center;gap:16px}
+.hero .actions small{font-size:14.5px;color:rgba(255,255,255,.88)}
+.hero .actions small strong{color:#fff}
+
+/* Colagem do produto */
+.stage{position:relative;z-index:2;width:min(1100px,100% - 32px);margin:clamp(48px,7vw,80px) auto 0;aspect-ratio:1100/560}
+.stage .laptop{position:absolute;left:50%;bottom:0;width:70%;transform:translateX(-50%);filter:drop-shadow(0 40px 50px rgba(70,15,0,.45))}
+.card{position:absolute;background:#fff;border-radius:14px;padding:10px;box-shadow:0 30px 60px -20px rgba(60,10,0,.55),0 2px 6px rgba(0,0,0,.08)}
+.card img{border-radius:8px}
+.c-label{left:0;top:10%;width:24%;--r:-7deg;transform:rotate(var(--r))}
+.c-price{right:0;top:4%;width:31%;--r:5deg;transform:rotate(var(--r))}
+.c-bar{right:6%;bottom:6%;width:17%;--r:-4deg;transform:rotate(var(--r));z-index:3}
+.c-qr{left:9%;bottom:4%;width:13%;--r:6deg;transform:rotate(var(--r));z-index:3}
+.tag{position:absolute;z-index:4;background:var(--ink);color:#fff;font-size:13px;font-weight:700;padding:8px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 10px 24px -8px rgba(0,0,0,.5)}
+.tag::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--sun);margin-right:8px;transform:translateY(-1px)}
+.t1{left:17%;top:4%}.t2{right:23%;top:-3%}.t3{right:2%;bottom:30%}
+
+/* Novidades */
+.news-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:64px}
+.news-head p{font-size:1.15rem;max-width:32rem}
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.news article{border:1px solid var(--line);border-radius:var(--r);padding:36px 32px;transition:border-color .2s,transform .25s}
+.news article:hover{border-color:#d8d1c9;transform:translateY(-4px)}
+.ico{width:52px;height:52px;border-radius:14px;background:linear-gradient(140deg,var(--orange-2),var(--red));display:grid;place-items:center;margin-bottom:28px;box-shadow:0 10px 20px -8px rgba(217,54,31,.6)}
+.ico svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.news .display{font-size:1.9rem;margin-bottom:12px}
+.news p{color:var(--muted)}
+
+/* Vitrine */
+.showcase{background:var(--surface)}
+.show{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,5vw,72px);align-items:center;margin-top:56px}
+.tabs{display:grid;gap:4px}
+.tab{all:unset;cursor:pointer;display:block;padding:22px 24px;border-radius:18px;position:relative;transition:background .2s}
+.tab h3{display:flex;align-items:center;gap:12px;color:var(--muted);transition:color .2s}
+.tab h3 span{font-size:13px;font-weight:700;color:var(--orange);font-stretch:110%}
+.tab p{max-height:0;overflow:hidden;opacity:0;color:var(--muted);transition:max-height .35s ease,opacity .25s,margin .35s}
+.tab[aria-selected="true"]{background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 30px -16px rgba(60,30,10,.25)}
+.tab[aria-selected="true"] h3{color:var(--ink)}
+.tab[aria-selected="true"] p{max-height:160px;opacity:1;margin-top:8px}
+.tab:hover h3{color:var(--ink)}
+.tab .bar{position:absolute;left:24px;right:24px;bottom:12px;height:3px;border-radius:3px;background:var(--line);overflow:hidden;display:none}
+.tab[aria-selected="true"] .bar{display:block}
+.tab .bar i{display:block;height:100%;width:0;background:var(--orange)}
+.tab[aria-selected="true"] .bar i{animation:fill 6s linear forwards}
+.paused .tab .bar i{animation-play-state:paused}
+@keyframes fill{to{width:100%}}
+.panel-frame{position:relative;background:#fff;border-radius:28px;aspect-ratio:4/3.3;display:grid;place-items:center;padding:clamp(20px,4vw,48px);overflow:hidden;box-shadow:0 40px 80px -40px rgba(60,30,10,.35)}
+.panel-frame::before{content:"";position:absolute;inset:auto -20% -45% -20%;height:70%;background:radial-gradient(closest-side,rgba(255,138,31,.22),transparent)}
+.panel{position:absolute;inset:clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.97) translateY(10px);transition:opacity .45s ease,transform .5s ease;pointer-events:none}
+.panel.active{opacity:1;transform:none;pointer-events:auto}
+.panel img{max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.06),0 20px 40px -18px rgba(0,0,0,.3)}
+
+/* Público */
+.who{text-align:center}
+.who .display{max-width:16ch;margin-inline:auto}
+.who-list{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;margin:48px auto 0;max-width:900px}
+.who-list span{font-size:clamp(1.05rem,1.8vw,1.3rem);font-weight:600;padding:12px 22px;border-radius:999px;background:var(--surface);transition:background .2s,color .2s}
+.who-list span:hover{background:var(--orange);color:#fff}
+
+/* Licença */
+.license{background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.license::after{content:"";position:absolute;right:-180px;top:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(closest-side,rgba(239,90,28,.38),transparent)}
+.license .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.4fr .6fr;gap:56px;align-items:end}
+.license h2{font-size:clamp(2.1rem,5vw,4.3rem)}
+.license h2 span{display:block;white-space:nowrap;color:rgba(255,255,255,.38)}
+.license h2 span:last-child{color:#fff}
+.license-side p{color:rgba(255,255,255,.72);font-size:1.1rem;margin-bottom:28px}
+.from{display:flex;align-items:baseline;gap:10px;margin-bottom:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14)}
+.from small{font-size:15px;color:rgba(255,255,255,.6)}
+.from strong{font-size:2.6rem;font-weight:800;font-stretch:115%;letter-spacing:-.03em;white-space:nowrap}
+
+/* CTA final */
+.final{background:radial-gradient(100% 120% at 50% 0%,var(--orange-2),var(--orange) 50%,var(--red));color:#fff;text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;opacity:.16;background-image:radial-gradient(rgba(255,255,255,.6) 1px,transparent 1.2px);background-size:22px 22px}
+.final .wrap{position:relative}
+.final h2{max-width:15ch;margin:0 auto}
+.final p{max-width:34rem;margin:22px auto 36px;font-size:1.15rem;color:rgba(255,255,255,.9)}
+.final small{display:block;margin-top:18px;font-size:14px;color:rgba(255,255,255,.82)}
+
+/* Rodapé */
+footer{padding:44px 0 32px;font-size:15px;color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
+.foot .brand{color:var(--ink)}
+.foot .brand i{background:var(--orange)}
+.foot .brand i svg{stroke:#fff}
+.foot nav{display:flex;flex-wrap:wrap;gap:22px}
+.foot nav a:hover{color:var(--ink)}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line);font-size:14px}
+.foot-bottom a{color:var(--ink);font-weight:600}
+.foot-bottom a:hover{color:var(--orange)}
+
+/* CTA fixo celular */
+.mobile-cta{display:none}
+
+/* Animações */
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy > *{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .hero-copy > *:nth-child(2){animation-delay:.08s}.hero-copy > *:nth-child(3){animation-delay:.16s}.hero-copy > *:nth-child(4){animation-delay:.24s}
+  .stage{animation:rise 1.1s .3s cubic-bezier(.2,.7,.2,1) both}
+  .card{animation:float 7s ease-in-out infinite}
+  .c-price{animation-delay:-2s}.c-bar{animation-delay:-4s}.c-qr{animation-delay:-1s}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+  @keyframes float{0%,100%{transform:rotate(var(--r)) translateY(0)}50%{transform:rotate(var(--r)) translateY(-10px)}}
+}
+
+@media (max-width:960px){
+  .news-head,.show,.license .wrap{grid-template-columns:1fr}
+  .news{grid-template-columns:1fr}
+  .stage{aspect-ratio:1100/700}
+  .stage .laptop{width:88%}
+  .c-label{width:30%;top:2%}.c-price{width:38%}.c-bar{width:24%}.c-qr{display:none}
+  .tag{display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:86px}
+  .wrap{width:calc(100% - 40px)}
+  .top-link{display:none}
+  .hero .btn{width:100%}
+  .stage{aspect-ratio:1/0.85;margin-top:40px}
+  .stage .laptop{width:100%;bottom:0}
+  .c-label{width:40%;left:-2%;top:0}.c-price{width:52%;right:-2%;top:6%}.c-bar{width:34%;right:4%;bottom:auto;top:44%}
+  .tab{padding:18px}
+  .license h2 span{white-space:normal}
+  .panel-frame{aspect-ratio:1/1}
+  .mobile-cta{display:block;position:fixed;inset:auto 12px 12px;z-index:30;transform:translateY(150%);transition:transform .3s}
+  .mobile-cta.show{transform:none}
+  .mobile-cta .btn{width:100%;box-shadow:0 12px 30px -8px rgba(0,0,0,.4)}
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="inicio">
+  <div class="wrap top">
+    <a class="brand" href="#inicio" aria-label="Rótula Fácil"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#ef5a1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V5a2 2 0 0 1 2-2h7l9 9-9 9-9-9z"/><circle cx="8" cy="8" r="1.6"/></svg></i>Rótula Fácil</a>
+    <a class="top-link js-site" href="https://www.rotulafacil.com.br/#planos">Conheça nossos planos →</a>
+  </div>
+
+  <div class="wrap hero-copy">
+    <p class="pill"><b>NOVO</b> Rótula Fácil Desktop chegou</p>
+    <h1 class="display">Rotular alimentos ficou fácil de verdade.</h1>
+    <p class="lead">Rótulos, etiquetas e tabela nutricional no padrão ANVISA, com código de barras, QR Code e precificação. Tudo num só programa, agora mais rápido e mais completo.</p>
+    <div class="actions">
+      <a class="btn btn-white js-site" href="https://www.rotulafacil.com.br/">Conhecer o novo Rótula Fácil <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <small>Licença permanente · <strong>sem mensalidade</strong></small>
+    </div>
+  </div>
+
+  <div class="stage" aria-hidden="true">
+    <img class="laptop" src="img/notebook.png" alt="" width="1200" height="782" fetchpriority="high">
+    <div class="card c-label"><img src="img/rotulo.png" alt="" width="900" height="1020"></div>
+    <div class="card c-price"><img src="img/precificacao.png" alt="" width="1100" height="900"></div>
+    <div class="card c-bar"><img src="img/cdbar.png" alt="" width="603" height="402"></div>
+    <div class="card c-qr"><img src="img/cardapio.png" alt="" width="1100" height="1100"></div>
+    <span class="tag t1">Tabela nutricional ANVISA</span>
+    <span class="tag t2">Precificação</span>
+    <span class="tag t3">Código de barras</span>
+  </div>
+</header>
+
+<main>
+  <section class="news-sec">
+    <div class="wrap">
+      <div class="news-head reveal">
+        <h2 class="display">Uma nova versão, feita do zero.</h2>
+        <p class="muted">O Rótula Fácil ganhou um sistema desktop novo. Ele continua fazendo tudo o que você já usa, só que melhor.</p>
+      </div>
+      <div class="news">
+        <article class="reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <h3 class="display">Mais rápido</h3>
+          <p>Novo sistema desktop construído pra ter mais desempenho no dia a dia da produção.</p>
+        </article>
+        <article class="reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 9h6M7 13h10"/></svg></div>
+          <h3 class="display">Mais moderno</h3>
+          <p>Interface atualizada, mais organizada e simples de usar, mesmo pra quem não tem costume com computador.</p>
+        </article>
+        <article class="reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></div>
+          <h3 class="display">Mais completo</h3>
+          <p>Etiquetas, tabela nutricional, código de barras, QR Code, cadastro de produtos e precificação no mesmo lugar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="showcase" id="recursos">
+    <div class="wrap">
+      <h2 class="display reveal" style="max-width:16ch">Veja o que ele faz por você.</h2>
+      <div class="show" id="show">
+        <div class="tabs" role="tablist" aria-label="Recursos do Rótula Fácil">
+          <button class="tab" role="tab" id="tab-0" aria-controls="panel-0" aria-selected="true">
+            <h3>Tabela nutricional ANVISA</h3>
+            <p>Você informa os ingredientes e o sistema monta a tabela nutricional no formato exigido, com porção, %VD, ingredientes e alérgenos.</p>
+            <span class="bar"><i></i></span>
+          </button>
+          <button class="tab" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="false" tabindex="-1">
+            <h3>Etiquetas com código de barras</h3>
+            <p>Etiquetas profissionais com validade, lote e código de barras, prontas pra imprimir.</p>
+            <span class="bar"><i></i></span>
+          </button>
+          <button class="tab" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1">
+            <h3>QR Code</h3>
+            <p>Gere QR Codes pra etiqueta, embalagem ou cardápio sem precisar de outro aplicativo.</p>
+            <span class="bar"><i></i></span>
+          </button>
+          <button class="tab" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1">
+            <h3>Precificação inteligente</h3>
+            <p>Descubra o preço de venda ideal somando matéria-prima, custos fixos e variáveis, impostos e margem de lucro.</p>
+            <span class="bar"><i></i></span>
+          </button>
+        </div>
+        <div class="panel-frame">
+          <div class="panel active" role="tabpanel" id="panel-0" aria-labelledby="tab-0"><img src="img/rotulo.png" alt="Rótulo com tabela nutricional gerado pelo Rótula Fácil" loading="lazy" width="900" height="1020"></div>
+          <div class="panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" hidden><img src="img/cdbar.png" alt="Etiqueta com código de barras gerada pelo Rótula Fácil" loading="lazy" width="603" height="402"></div>
+          <div class="panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden><img src="img/cardapio.png" alt="QR Code de cardápio gerado pelo Rótula Fácil" loading="lazy" width="1100" height="1100"></div>
+          <div class="panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden><img src="img/precificacao.png" alt="Painel de análise de custos e precificação" loading="lazy" width="1100" height="900"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="who">
+    <div class="wrap">
+      <h2 class="display reveal">Feito pra quem produz e vende alimentos.</h2>
+      <div class="who-list reveal">
+        <span>Padarias</span><span>Confeitarias</span><span>Restaurantes</span><span>Agroindústrias</span>
+        <span>Pequenos produtores</span><span>MEIs</span><span>Marmitarias</span><span>Produção artesanal</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="license">
+    <div class="wrap">
+      <h2 class="display reveal"><span>Sem mensalidade.</span><span>Sem anuidade.</span><span>Seu pra sempre.</span></h2>
+      <div class="license-side reveal">
+        <p>Você paga uma vez e usa por tempo indeterminado, com atualizações e suporte especializado.</p>
+        <div class="from"><small>a partir de</small><strong>R$ 69,90</strong></div>
+        <a class="btn btn-orange js-site" href="https://www.rotulafacil.com.br/#planos">Ver os planos no site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2 class="display reveal">Seu próximo rótulo pode sair certo de primeira.</h2>
+      <p class="reveal">Conheça o novo Rótula Fácil Desktop e veja todos os detalhes no site oficial.</p>
+      <div class="reveal">
+        <a class="btn btn-white js-site" href="https://www.rotulafacil.com.br/">Quero conhecer o Rótula Fácil <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <small>Programa para Windows 10 e 11</small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#inicio"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V5a2 2 0 0 1 2-2h7l9 9-9 9-9-9z"/><circle cx="8" cy="8" r="1.6"/></svg></i>Rótula Fácil</a>
+      <nav aria-label="Links do rodapé">
+        <a class="js-site" href="https://www.rotulafacil.com.br/">Site oficial</a>
+        <a class="js-site" href="https://www.rotulafacil.com.br/#planos">Planos</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Rótula Fácil. Todos os direitos reservados.</span>
+      <span>Desenvolvido por <a href="https://nixdevcode.com" target="_blank" rel="noopener">nixdevcode.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta" id="mobileCta">
+  <a class="btn btn-orange js-site" href="https://www.rotulafacil.com.br/">Conhecer o Rótula Fácil</a>
+</div>
+
+<script>
+{
+  // Repassa UTMs e IDs de clique do anúncio para os links do site oficial
+  const qs = new URLSearchParams(location.search);
+  if ([...qs.keys()].length) {
+    document.querySelectorAll('a.js-site').forEach(a => {
+      const url = new URL(a.href);
+      qs.forEach((v, k) => { if (!url.searchParams.has(k)) url.searchParams.set(k, v); });
+      a.href = url.toString();
+    });
+  }
+
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Entrada das seções ao rolar
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduce) {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObserver.unobserve(e.target); } });
+    }, { threshold: .15 });
+    reveals.forEach(el => revealObserver.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('in'));
+  }
+
+  // Vitrine com abas (troca automática a cada 6s, pausa ao passar o mouse)
+  const show = document.getElementById('show');
+  const tabs = [...show.querySelectorAll('[role=tab]')];
+  const panels = [...show.querySelectorAll('[role=tabpanel]')];
+  let current = 0, timer = null;
+  const select = (i, focus) => {
+    current = (i + tabs.length) % tabs.length;
+    tabs.forEach((t, n) => {
+      const on = n === current;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      panels[n].classList.toggle('active', on);
+      panels[n].hidden = !on;
+    });
+    const bar = tabs[current].querySelector('.bar i');
+    bar.style.animation = 'none'; void bar.offsetWidth; bar.style.animation = '';
+    if (focus) tabs[current].focus();
+    restart();
+  };
+  const restart = () => {
+    clearTimeout(timer);
+    if (!reduce) timer = setTimeout(() => select(current + 1), 6000);
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(i));
+    t.addEventListener('keydown', e => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); select(current + 1, true); }
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); select(current - 1, true); }
+    });
+  });
+  show.addEventListener('mouseenter', () => { clearTimeout(timer); show.classList.add('paused'); });
+  show.addEventListener('mouseleave', () => { show.classList.remove('paused'); select(current); });
+  restart();
+
+  // CTA fixo no celular depois que o topo sai da tela
+  const cta = document.getElementById('mobileCta');
+  const hero = document.querySelector('.hero');
+  if ('IntersectionObserver' in window) {
+    const heroObserver = new IntersectionObserver(([e]) => cta.classList.toggle('show', !e.isIntersecting));
+    heroObserver.observe(hero);
+  }
+}
+</script>
+</body>
+</html>

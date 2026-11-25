@@ -1,41 +1,46 @@
 # Rótula Fácil : landing page
 
-Landing page de lançamento e captação do **Rótula Fácil Desktop**.
+Página de venda do **Rótula Fácil Desktop**.
 
 
 ![Prévia da landing page](docs/preview.png)
 
-Seções: topo com colagem do produto, novidades da versão, vitrine interativa
-dos recursos (abas), público, licença sem mensalidade e chamada final.
+Seções: topo com banner do produto, faixa de acesso vitalício, do programa ao
+seu produto (com vídeo), galeria de telas reais, planos com checkout e
+comparativo da precificação (com vídeo), instalação e suporte e chamada final.
 
 ## Estrutura
 
 ```
 rotulafacil-desktop/
 ├── desktop/
-│   ├── index.html      # Página completa (HTML + CSS + JS, sem dependências)
-│   └── img/            # Capturas do sistema usadas na página
-│       ├── notebook.png      # Notebook com fundo transparente
-│       ├── rotulo.png        # Rótulo com tabela nutricional
-│       ├── cdbar.png         # Código de barras
-│       ├── cardapio.png      # QR Code
-│       └── precificacao.png  # Painel de precificação
+│   ├── index.html      
+│   ├── img/
+│   │   ├── banner-notebook-embalagens.webp  
+│   │   ├── do-programa-ao-produto.webp      
+│   │   ├── og-rotulafacil.jpg              
+│   │   └── telas/                          
+│   └── video/         
+├── scripts/
+│   ├── build.mjs       
+│   └── serve.mjs      
 ├── docs/
-│   └── preview.png         # Captura da página inteira (usada neste README)
+│   └── preview.png    
+├── package.json
 ├── .editorconfig
 ├── .gitignore
 └── README.md
 ```
 
 
+
 ## Acessibilidade e desempenho
 
-- Layout responsivo (desktop, tablet e celular), com botão fixo no celular.
-- Vitrine em abas acessível por teclado (setas), com troca automática que pausa ao passar o mouse.
-- Imagens abaixo da dobra com `loading="lazy"`.
+- Layout responsivo (desktop, tablet e celular), com menu fixo no desktop e botão fixo no celular.
+- Galeria acessível por teclado (setas), com arrastar no celular e ampliação das telas.
+- Vídeos sem som que tocam só quando aparecem na tela, com botões de pausa e de som.
+- Imagens em WebP e conteúdo abaixo da dobra com `loading="lazy"`.
 - Foco visível em todos os elementos clicáveis e textos alternativos nas imagens.
-- Animações desativadas para quem usa "reduzir movimento" no sistema.
+- Animações e reprodução automática desativadas para quem usa "reduzir movimento" no sistema.
 
 ---
-
-Desenvolvido por [nixdevcode.com](https://nixdevcode.com)
